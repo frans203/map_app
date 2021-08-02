@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mapty</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="./icon.png"
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,200;0,300;0,500;1,200&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <div class="app">
+      <div class="left">
+        <div class="logo">
+         
+          <img src="./logo.png" />
+        </div>
+        <div class="content-all">
+        
+          <div class="content">
+            <form class="form hidden">
+              <div class="form_row">
+                <label class="form_label">Type: </label>
+                <select class="form_input form_input_type">
+                  <option value="running">running</option>
+                  <option value="cycling">cycling</option>
+                </select>
+              </div>
+
+              <div class="form_row">
+                <label class="form_label">Distance: </label>
+                <input
+                  type="number"
+                  class="form_input form_distance"
+                  placeholder="km"
+                />
+              </div>
+
+              <div class="form_row">
+                <label class="form_label">Duration: </label>
+                <input
+                  type="number"
+                  class="form_input form_duration"
+                  placeholder="min"
+                />
+              </div>
+
+              <div class="form_row">
+                <label class="form_label">Cadence: </label>
+                <input
+                  type="text"
+                  class="form_input form_cadence"
+                  placeholder="m/s"
+                />
+              </div>
+
+              <div class="form_row form_row--hidden">
+                <label class="form_label">Elev Gain: </label>
+                <input
+                  type="text"
+                  class="form_input form_elev"
+                  placeholder="meters"
+                />
+              </div>
+              <button class="form__btn hidden">OK</button>
+            </form>
+
+            <!-- <ul class="list">
+            <li class="list-item list-item-run">
+              <h2>Running on day X</h2>
+              <div class="all-details">
+                <div class="wor_details">
+                  <span class="wor_details_icon">🏃‍♂️</span>
+                  <span class="wor_details_value">val</span>
+                  <span class="wor_details_unit">km</span>
+                </div>
+
+                <div class="wor_details">
+                  <span class="wor_details_icon">⏱</span>
+                  <span class="wor_details_value">val</span>
+                  <span class="wor_details_unit">min</span>
+                </div>
+
+                <div class="wor_details">
+                  <span class="wor_details_icon">⚡️</span>
+                  <span class="wor_details_value">val</span>
+                  <span class="wor_details_unit">min/km</span>
+                </div>
+
+                <div class="wor_details">
+                  <span class="wor_details_icon">🦶🏼</span>
+                  <span class="wor_details_value">val</span>
+                  <span class="wor_details_unit">spm</span>
+                </div>
+              </div>
+            </li>
+
+            <li class="list-item list-item-cic">
+              <h2>Cycling on day X</h2>
+              <div class="all-details">
+                <div class="wor_details">
+                  <span class="wor_details_icon">🚴‍♀️</span>
+                  <span class="wor_details_value">val</span>
+                  <span class="wor_details_unit">km</span>
+                </div>
+
+                <div class="wor_details">
+                  <span class="wor_details_icon">⏱</span>
+                  <span class="wor_details_value">val</span>
+                  <span class="wor_details_unit">min</span>
+                </div>
+
+                <div class="wor_details">
+                  <span class="wor_details_icon">⚡️</span>
+                  <span class="wor_details_value">val</span>
+                  <span class="wor_details_unit">km/h</span>
+                </div>
+
+                <div class="wor_details">
+                  <span class="wor_details_icon">⛰</span>
+                  <span class="wor_details_value">val</span>
+                  <span class="wor_details_unit">m</span>
+                </div>
+              </div>
+            </li>
+          </ul> -->
+          </div>
+        </div>
+        <div class='buttons'>
+        <button class='btn deleteAll'>Delete all</button>
+       
+        </div>
+        <div class="copy">
+         
+         Copyright by<a target="_blank" href="https://github.com/frans203 "class='copy-name'> &copy; Francisco Santana.</a> Project for porfolio</p>
+      </div>
+
+     
+    </div>
+    <div id="map"></div>
+    </div>
+  </body>
+</html>
