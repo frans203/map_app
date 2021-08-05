@@ -82,7 +82,26 @@ body {
 .form_row--hidden {
   display: none;
 }
+.form-row-submit {
+  width: 100%;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.form-submit {
+  width: 60%;
+  margin-left: 20%;
+  border-radius: 6rem;
+  border: 1px solid #fff;
+  color: #fff;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.5s;
+}
 
+.form-submit:hover {
+  color: #333;
+  background: #fff;
+}
 /* LIST */
 .list {
   width: 400px;
